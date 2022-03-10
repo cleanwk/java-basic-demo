@@ -10,6 +10,9 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>java-basic-jdbc</module>
+        <module>java-basic-kafka</module>
+        <module>java-basic-canal</module>
+        <module>java-adventure-spi</module>
     </modules>
 
     <properties>
@@ -32,6 +35,12 @@
             <artifactId>lombok</artifactId>
             <version>1.18.20</version>
             <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.7.25</version>
         </dependency>
 
 

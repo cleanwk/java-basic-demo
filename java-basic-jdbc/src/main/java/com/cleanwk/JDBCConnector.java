@@ -11,9 +11,9 @@ import java.sql.*;
 @Data
 public class JDBCConnector {
     // JDBC连接的URL, 不同数据库有不同的格式:
-    private final String JDBC_URL = "jdbc:mysql://localhost:3306/learnjdbc?useSSL=false&characterEncoding=utf8";
-    private final String JDBC_USER = "cmengfei";
-    private final String JDBC_PASSWORD = "wk4478200";
+    private final String JDBC_URL = "jdbc:mysql://txcloud.com:3306/sample?useSSL=false&characterEncoding=utf8";
+    private final String JDBC_USER = "root";
+    private final String JDBC_PASSWORD = "root";
 
     void unsafeQuery(){
         try(Connection connection = DriverManager.getConnection(JDBC_URL, JDBC_USER, JDBC_PASSWORD)){
@@ -36,7 +36,7 @@ public class JDBCConnector {
 
     void safeStatement(){
         try (Connection conn = DriverManager.getConnection(JDBC_URL, JDBC_USER, JDBC_PASSWORD)) {
-            try (PreparedStatement ps = conn.prepareStatement("SELECT id, grade, name, gender FROM students WHERE gender=? AND grade=?")) {
+            try (PreparedStatement ps = conn.prepareStatement("INSERT INTO `sample`.`runoob_tbl` (`id`, `runoob_title`, `runoob_author`, `submission_date`) VALUES (25, 'canal教程', 'zhangnijia.com', '2099-01-01')\n")) {
                 ps.setObject(1, "M"); // 注意：索引从1开始
                 ps.setObject(2, 3);
                 try (ResultSet rs = ps.executeQuery()) {

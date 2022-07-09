@@ -13,6 +13,8 @@
         <module>java-basic-kafka</module>
         <module>java-basic-canal</module>
         <module>java-adventure-spi</module>
+        <module>java-database-hbase</module>
+        <module>java-basic-lang3</module>
     </modules>
 
     <properties>

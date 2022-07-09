@@ -10,6 +10,8 @@
         <module name="java-basic-canal" />
         <module name="java-adventure-spi" />
         <module name="java-basic-jdbc" />
+        <module name="java-database-hbase" />
+        <module name="java-basic-lang3" />
         <module name="java-basic-kafka" />
       </profile>
     </annotationProcessing>
